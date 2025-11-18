@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: dim_date
+    columns:
+      - name: date_key
+        tests:
+          - unique
+          - not_null
+      - name: full_date
+        tests:
+          - not_null

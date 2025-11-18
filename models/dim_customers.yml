@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Dimension table for customers"
+    columns:
+      - name: customer_key
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: email
+        tests:
+          - not_null
+          - unique
+      - name: gender
+        tests:
+          - accepted_values:
+              values: ['Male', 'Female', 'Other']

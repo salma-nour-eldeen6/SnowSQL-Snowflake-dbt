@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_product_reviews
+    columns:
+      - name: review_key
+        tests:
+          - unique
+          - not_null
+      - name: rating
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
